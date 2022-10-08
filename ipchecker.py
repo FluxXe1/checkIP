@@ -1,0 +1,33 @@
+import socket
+import requests
+import pprint
+import json
+import pyfiglet
+
+ascii_banner = pyfiglet.figlet_format("WELLCOME")
+print (ascii_banner)
+print (f"Copyright FluxXe 2022")
+
+print ("Silahkan Masukan Username Dan Password Untuk Login")
+user  = input("Username: ")
+import getpass
+password = getpass.getpass()
+print (f"LOGIN SUCCES ")
+print (f"")
+
+ascii_banner = pyfiglet.figlet_format("IP CHECKER")
+print (ascii_banner)
+
+
+hostname = input("[+]MASUKAN DOMAIN: ")
+
+ip_address = socket.gethostbyname(hostname)
+
+
+requests_url = "https://geolocation-db.com/jsonp/" + ip_address
+response = requests.get(requests_url)
+geolocation = response.content.decode()
+geolocation = geolocation.split("(")[1].strip(")")
+geolocation = json.loads(geolocation)
+for k,v in geolocation.items():
+              pprint.pprint(str(k) + " : " + str(v))
