@@ -4,18 +4,18 @@ import pyfiglet
 ascii_banner = pyfiglet.figlet_format("WELLCOME")
 print(ascii_banner)
 
-print("Silahkan Masukan Username Dan Password Untuk Login")
+print("Enter Username And Password")
 
 username = "user"
 password = "admin"
 
 def login (user_name, pass_word) :
     if user_name != username and pass_word != password :
-        hasil = False
+        results = False
     else :
-        hasil = True
+        results = True
 
-    return hasil
+    return results
 
 i=1
 while i>=1:
@@ -28,8 +28,8 @@ while i>=1:
         break
     else :
         i-=0
-        print("USERNAME ATAU PASSWORD ANDA SALAH!!" )
-        print("MASUKAN DENGAN BENAR!!")
+        print("Your Username Or Password Is Wrong!!" )
+        print("Enter Correctly!!")
         print(f" ")
 
 
@@ -40,7 +40,7 @@ import socket
 import json
 import pprint
 
-hostname = input("[+]MASUKAN DOMAIN: ")
+hostname = input("[+]ENTER A DOMAIN: ")
 
 ip_address = socket.gethostbyname(hostname)
 
