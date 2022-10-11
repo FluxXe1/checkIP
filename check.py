@@ -19,8 +19,8 @@ def login (user_name, pass_word) :
 
 i=1
 while i>=1:
-    userName_=input("[+]Username :")
-    password_=input("[+]Password :")
+    userName_=input("[+] Username :")
+    password_=input("[+] Password :")
     hasil=(login(userName_, password_))
     if hasil == True :
         print ("LOGIN SUCCES")
@@ -32,15 +32,12 @@ while i>=1:
         print("Enter Correctly!!")
         print(f" ")
 
-
-ascii_banner = pyfiglet.figlet_format("IP CHECKER")
-print(ascii_banner)
-
 import socket
 import json
 import pprint
 
-hostname = input("[+]ENTER A DOMAIN: ")
+print("Enter The Domain You Want To Check")
+hostname = input("[+] ENTER A DOMAIN: ")
 
 ip_address = socket.gethostbyname(hostname)
 
